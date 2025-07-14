@@ -1,0 +1,154 @@
+/* Style de base pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif; /* Police de caractères */
+    line-height: 1.6; /* Hauteur de ligne */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 20px; /* Espacement intérieur */
+    background-color: #f5f5f5; /* Couleur de fond */
+    color: #333; /* Couleur du texte principal */
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 800px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    background: white; /* Fond blanc */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Styles pour les titres */
+h1, h2 {
+    color: #2c3e50; /* Couleur des titres */
+}
+
+/* Carte de profil */
+.profile-card {
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* En-tête de la carte profil */
+.profile-header {
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Style de l'image avatar */
+.profile-header img {
+    width: 150px; /* Largeur fixe */
+    height: 150px; /* Hauteur fixe */
+    border-radius: 50%; /* Forme circulaire */
+    object-fit: cover; /* Ajustement de l'image */
+    border: 3px solid #3498db; /* Bordure colorée */
+}
+
+/* Style du badge de rôle */
+.role {
+    display: inline-block; /* Affichage en ligne */
+    padding: 5px 10px; /* Espacement intérieur */
+    background: #3498db; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 20px; /* Coins très arrondis */
+    font-size: 0.9em; /* Taille de police */
+}
+
+/* Section des détails du profil */
+.profile-details {
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+.profile-details p {
+    margin: 10px 0; /* Marge verticale entre les paragraphes */
+}
+
+/* Style de base pour les boutons */
+.btn {
+    padding: 10px 15px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 1em; /* Taille de police */
+    transition: background-color 0.3s; /* Animation de transition */
+}
+
+/* Style spécifique pour le bouton Modifier */
+.edit-btn {
+    background-color: #3498db; /* Couleur bleue */
+    color: white; /* Texte blanc */
+    display: block; /* Affichage en bloc */
+    width: 100%; /* Pleine largeur */
+}
+
+.edit-btn:hover {
+    background-color: #2980b9; /* Couleur au survol */
+}
+
+/* Style du formulaire d'édition */
+.edit-form {
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    background: #f9f9f9; /* Fond légèrement grisé */
+}
+
+/* Style des groupes de champs du formulaire */
+.form-group {
+    margin-bottom: 15px; /* Marge en bas */
+}
+
+.form-group label {
+    display: block; /* Affichage en bloc */
+    margin-bottom: 5px; /* Marge en bas */
+    font-weight: bold; /* Texte en gras */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Pleine largeur */
+    padding: 8px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Modèle de boîte */
+}
+
+.form-group textarea {
+    resize: vertical; /* Redimensionnement vertical seulement */
+    min-height: 80px; /* Hauteur minimale */
+}
+
+/* Conteneur des boutons du formulaire */
+.form-actions {
+    display: flex; /* Disposition flexible */
+    justify-content: flex-end; /* Alignement à droite */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Style du bouton Enregistrer */
+.save-btn {
+    background-color: #2ecc71; /* Couleur verte */
+    color: white; /* Texte blanc */
+}
+
+.save-btn:hover {
+    background-color: #27ae60; /* Couleur au survol */
+}
+
+/* Style du bouton Annuler */
+.cancel-btn {
+    background-color: #e74c3c; /* Couleur rouge */
+    color: white; /* Texte blanc */
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b; /* Couleur au survol */
+}
+
+/* Classe utilitaire pour cacher des éléments */
+.hidden {
+    display: none; /* Masquage complet */
+}

@@ -1,0 +1,154 @@
+/* Met le fond bleu clair et la police du site */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Police d'écriture pour tout le site */
+    background: linear-gradient(120deg, #e3f0ff 0%, #cbe5ff 100%); /* Dégradé bleu clair en fond */
+    margin: 0; /* Enlève la marge par défaut du navigateur */
+    padding: 0; /* Enlève le padding par défaut du navigateur */
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    /* Petit motif bleu en fond */
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="%23e3f0ff"/><circle cx="20" cy="20" r="2" fill="%23b3d1f7"/></svg>');
+}
+
+/* Bloc principal du CV au centre de la page */
+.cv-container {
+    background: #fff; /* Fond blanc pour le CV */
+    max-width: 700px; /* Largeur maximale du CV */
+    margin: 48px auto 32px auto; /* Espace autour du CV et centrage horizontal */
+    padding: 40px 50px 44px 50px; /* Espace intérieur autour du contenu */
+    border-radius: 22px; /* Bords arrondis du CV */
+    box-shadow: 0 8px 32px rgba(44,62,80,0.13); /* Ombre portée douce */
+    border-top: 7px solid #4ea3f7; /* Bordure bleue en haut du CV */
+    transition: box-shadow 0.2s; /* Animation douce de l'ombre au survol */
+    position: relative; /* Permet d'utiliser des positions absolues à l'intérieur */
+}
+
+/* Effet d'ombre quand on passe la souris sur le CV */
+.cv-container:hover {
+    box-shadow: 0 16px 48px rgba(78,163,247,0.18); /* Ombre plus grande au survol */
+}
+
+/* Pour centrer la photo de profil */
+.photo-section {
+    display: flex; /* Utilise Flexbox pour centrer la photo */
+    justify-content: center; /* Centre horizontalement */
+    margin-bottom: 18px; /* Espace sous la photo */
+}
+
+/* Rond et bord bleu pour la photo */
+.photo-profil {
+    width: 120px; /* Largeur de la photo */
+    height: 120px; /* Hauteur de la photo */
+    object-fit: cover; /* La photo garde ses proportions et remplit le cadre */
+    border-radius: 50%; /* Photo ronde */
+    border: 4px solid #4ea3f7; /* Bordure bleue autour de la photo */
+    box-shadow: 0 4px 16px rgba(78,163,247,0.13); /* Petite ombre sous la photo */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation douce au survol */
+    background: #e3f0ff; /* Fond bleu clair derrière la photo */
+}
+
+/* Effet zoom sur la photo au survol */
+.photo-profil:hover {
+    transform: scale(1.08) rotate(-2deg); /* Zoom et légère rotation au survol */
+    box-shadow: 0 8px 32px rgba(78,163,247,0.18); /* Ombre plus grande au survol */
+}
+
+/* Grand titre pour le nom */
+h1 {
+    color: #1a355b; /* Couleur bleu foncé pour le nom */
+    margin-bottom: 2px; /* Petit espace sous le nom */
+    text-align: center; /* Centre le texte */
+    font-size: 2.3em; /* Taille de police grande */
+    letter-spacing: 1.2px; /* Espacement entre les lettres */
+    font-weight: 700; /* Texte en gras */
+}
+
+/* Titre bleu clair pour chaque section */
+h2 {
+    color: #4ea3f7; /* Bleu clair pour les titres de section */
+    margin-top: 36px; /* Espace au-dessus du titre */
+    margin-bottom: 12px; /* Espace en dessous du titre */
+    font-size: 1.28em; /* Taille de police des titres */
+    border-left: 5px solid #4ea3f7; /* Barre bleue à gauche du titre */
+    padding-left: 12px; /* Espace entre la barre et le texte */
+    background: linear-gradient(90deg, #e3f0ff 60%, #fff 100%); /* Dégradé bleu clair derrière le titre */
+    font-weight: 600; /* Titre en semi-gras */
+}
+
+/* Petit titre pour sous-sections */
+h3 {
+    color: #1a355b; /* Bleu foncé pour les sous-titres */
+    margin-top: 18px; /* Espace au-dessus du sous-titre */
+    margin-bottom: 6px; /* Espace en dessous du sous-titre */
+    font-size: 1.08em; /* Taille de police des sous-titres */
+    font-weight: 600; /* Sous-titre en semi-gras */
+    letter-spacing: 0.5px; /* Espacement entre les lettres */
+}
+
+/* Bloc pour le téléphone et l'email */
+.info {
+    margin-bottom: 18px; /* Espace sous le bloc contact */
+    text-align: center; /* Centre le texte */
+}
+
+/* Style du texte contact */
+.info p {
+    margin: 3px 0; /* Espace vertical entre les lignes */
+    color: #3a4a5d; /* Gris bleuté pour le texte */
+    font-size: 1.05em; /* Taille de police légèrement plus grande */
+}
+
+/* Lien email bleu souligné */
+.info a {
+    color: #2176bd; /* Bleu moyen pour le lien email */
+    background: none; /* Pas de fond */
+    padding: 0; /* Pas d'espace autour */
+    border-radius: 0; /* Pas d'arrondi */
+    text-decoration: underline; /* Lien souligné */
+    font-weight: 500; /* Lien en semi-gras */
+    transition: color 0.2s; /* Animation douce de la couleur au survol */
+    margin-left: 6px; /* Petit espace à gauche du lien */
+    font-size: 1em; /* Taille normale */
+    box-shadow: none; /* Pas d'ombre */
+}
+
+/* Lien email plus clair au survol */
+.info a:hover {
+    color: #4ea3f7; /* Bleu clair au survol */
+    background: none; /* Pas de fond au survol */
+}
+
+/* Listes à puces */
+ul {
+    padding-left: 22px; /* Décale les puces vers la droite */
+    margin-top: 0; /* Pas d'espace au-dessus de la liste */
+    margin-bottom: 0.5em; /* Petit espace sous la liste */
+}
+
+/* Bloc pour chaque partie du CV */
+.section {
+    margin-bottom: 26px; /* Espace sous chaque section */
+    background: #f6faff; /* Fond bleu très clair pour les sections */
+    border-radius: 10px; /* Bords arrondis des sections */
+    padding: 18px 22px 12px 22px; /* Espace intérieur dans la section */
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06); /* Petite ombre sous la section */
+    border-left: 3px solid #4ea3f7; /* Barre bleue à gauche de la section */
+    transition: box-shadow 0.2s, border-color 0.2s; /* Animation douce au survol */
+}
+
+/* Effet d'ombre et bord bleu foncé au survol */
+.section:hover {
+    box-shadow: 0 6px 18px rgba(78,163,247,0.10); /* Ombre plus grande au survol */
+    border-left: 5px solid #2176bd; /* Barre bleue plus foncée au survol */
+}
+
+/* Pas de marge en bas pour la dernière section */
+.section:last-child {
+    margin-bottom: 0; /* Pas d'espace sous la dernière section */
+}
+
+/* Style des éléments de liste */
+li {
+    margin-bottom: 4px; /* Espace entre chaque élément de liste */
+    color: #1a355b; /* Bleu foncé pour le texte des listes */
+    font-size: 1.04em; /* Taille de police des listes */
+} 

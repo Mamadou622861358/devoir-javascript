@@ -1,84 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestion des membres</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Corps du document -->
-    <div class="container">
-      <h1>Fiche Membre</h1>
-      <div id="userProfile" class="profile-card">
-        <div class="profile-header">
-          <img id="userAvatar" src="a.jpg" alt="Avatar" />
-          <h2 id="userName">Alpha Sylla</h2>
-          <p id="userRole" class="role">Membre standard</p>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Démo DOM / Événements / BOM</title>
+  <style> #boite { width: 200px; height: 200px; background: lightblue; margin: 20px; } </style>
+</head>
+<body>
+  <h1 id="titre">Titre interactif</h1>
+  <button id="btn">Change couleur</button>
+  <div id="boite">Survole-moi ou clique-moi</div>
 
-        <div class="profile-details">
-          <p>
-            <strong>Email:</strong> <span id="userEmail">alpha@gmail.com</span>
-          </p>
-          <p>
-            <strong>Téléphone:</strong> <span id="userPhone">621456789</span>
-          </p>
-          <p><strong>Adresse:</strong> <span id="userAddress">Labé</span></p>
-          <p>
-            <strong>Date d'inscription:</strong>
-            <span id="userJoinDate">15/01/2023</span>
-          </p>
-        </div>
+  <script>
+    const titre = document.getElementById('titre');
+    const btn = document.getElementById('btn');
+    const boite = document.getElementById('boite');
 
-        <button id="editBtn" class="btn edit-btn">Modifier le profil</button>
-      </div>
+    // DOM : modification initiale
+    titre.textContent += ' (modifié via DOM)';
 
-      <div id="editForm" class="edit-form hidden">
-        <h2>Modifier le profil</h2>
+    // Événement clic bouton
+    btn.addEventListener('click', () => {
+      titre.style.color = titre.style.color === 'crimson' ? 'green' : 'crimson';
+    });
 
-        <form id="profileForm">
-          <div class="form-group">
-            <label for="editName">Nom complet:</label>
-            <input type="text" id="editName" required />
-          </div>
+    // Événements souris sur div
+    boite.addEventListener('mouseover', () => boite.style.background = 'lightcoral');
+    boite.addEventListener('mouseout', () => boite.style.background = 'lightblue');
+    boite.addEventListener('click', () => console.log('Div cliquée !'));
 
-          <div class="form-group">
-            <label for="editEmail">Email:</label>
-            <input type="email" id="editEmail" required />
-          </div>
+    // Événements clavier et scroll
+    document.addEventListener('keydown', e => console.log(`Touche appuyée: ${e.key}`));
+    window.addEventListener('scroll', () => console.log(`Position scroll Y: ${window.scrollY}`));
 
-          <div class="form-group">
-            <label for="editPhone">Téléphone:</label>
-            <input type="tel" id="editPhone" />
-          </div>
-
-          <div class="form-group">
-            <label for="editAddress">Adresse:</label>
-            <textarea id="editAddress" rows="3"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="editRole">Rôle:</label>
-            <select id="editRole">
-              <!-- Menu déroulant pour le rôle -->
-              <option value="Membre standard">Membre standard</option>
-              <option value="Membre premium">Membre premium</option>
-              <option value="Administrateur">Administrateur</option>
-            </select>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn save-btn">Enregistrer</button>
-            <button type="button" id="cancelBtn" class="btn cancel-btn">
-              Annuler
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-    <!-- Inclusion du fichier JavaScript -->
-  </body>
+    // BOM : infos console
+    console.log('Taille fenêtre:', window.innerWidth, '×', window.innerHeight);
+    console.log('User agent:', navigator.userAgent);
+    console.log('URL actuelle:', location.href);
+  </script>
+</body>
 </html>

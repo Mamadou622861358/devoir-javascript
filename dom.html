@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <h1 id="titre">Titre DOM</h1>
+    <button id="changeTitre">Changer le titre</button>
+    <div id="zone" style="width: 100px; height: 100px; background: red"></div>
+    <!-- JavaScript -->
+    <script>
+      // DOM : changement de texte
+      const titre = document.getElementById("titre");
+      document.getElementById("changeTitre").addEventListener("click", () => {
+        titre.textContent = "Titre modifié !";
+      });
+      // Evenement souris
+      const zone = document.getElementById("zone");
+      2;
+      zone.addEventListener(
+        "mouseover",
+        () => (zone.style.backgroundColor = "blue")
+      );
+      zone.addEventListener(
+        "mouseout",
+        () => (zone.style.backgroundColor = "red")
+      );
+      // BOM
+      console.log(location.href);
+    </script>
+  </body>
+</html>

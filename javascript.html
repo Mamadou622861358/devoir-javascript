@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Définition des métadonnées et encodage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Récap Événements</title>
+    <!-- Lien vers la feuille de style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête de la page -->
+    <header id="main-header">
+        <h1>Projet Récap Événements</h1>
+        <!-- Div pour afficher la taille de l'écran -->
+        <div id="screen-size"></div>
+    </header>
+
+    <main>
+        <!-- Section 1: Boutons interactifs -->
+        <section class="button-section">
+            <h2>Boutons interactifs</h2>
+            <div class="buttons-container">
+                <!-- Boutons qui seront manipulés en JS -->
+                <button class="action-btn">Bouton 1</button>
+                <button class="action-btn">Bouton 2</button>
+                <button class="action-btn">Bouton 3</button>
+            </div>
+            <!-- Message qui s'affichera au clic -->
+            <p id="click-message"></p>
+        </section>
+
+        <!-- Section 2: Effets de survol -->
+        <section class="hover-section">
+            <h2>Zone sensible</h2>
+            <!-- Bloc qui réagit au survol -->
+            <div id="hover-block">Passez la souris sur moi !</div>
+            <!-- Statut du survol -->
+            <p id="hover-status">Statut: souris en dehors</p>
+        </section>
+
+        <!-- Section 3: Détection des touches clavier -->
+        <section class="keypress-section">
+            <h2>Détection de touches</h2>
+            <!-- Affiche la touche pressée -->
+            <div id="key-display">Appuyez sur une touche...</div>
+        </section>
+
+        <!-- Section 4: Formulaire -->
+        <section class="form-section">
+            <h2>Formulaire</h2>
+            <!-- Formulaire avec gestion d'événement submit -->
+            <form id="main-form">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" id="submit-btn">Envoyer</button>
+            </form>
+            <!-- Sortie après soumission du formulaire -->
+            <div id="form-output"></div>
+        </section>
+
+        <!-- Section 5: Propagation d'événements -->
+        <section class="propagation-section">
+            <h2>Propagation d'événements</h2>
+            <!-- Conteneur parent -->
+            <div id="parent-box">
+                Zone parente (cliquez ici)
+                <!-- Conteneur enfant avec stopPropagation -->
+                <div id="child-box">Zone enfant (cliquez ici)</div>
+            </div>
+            <!-- Message expliquant la propagation -->
+            <p id="propagation-message"></p>
+        </section>
+
+        <!-- Espace pour permettre le défilement -->
+        <div class="spacer"></div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>Projet réalisé avec JavaScript</p>
+    </footer>
+
+    <!-- Lien vers le script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

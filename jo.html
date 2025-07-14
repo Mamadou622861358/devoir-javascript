@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Analyse du profil utilisateur</title>
+</head>
+<body>
+  <button id="demarrer">Commencer l’analyse</button>
+
+  <div id="resultat" style="margin-top: 20px;"></div>
+
+  <script>
+    // Fonction déjà commentée ligne par ligne
+    function analyserProfil(age, tempsConnexion) {
+      let statut;
+      let message;
+
+      if (age < 18) {
+        if (tempsConnexion < 2) {
+          statut = "Jeune léger";
+        } else {
+          statut = "Jeune intense";
+        }
+      } else {
+        if (tempsConnexion < 2) {
+          statut = "Adulte léger";
+        } else {
+          statut = "Adulte intense";
+        }
+      }
+
+      switch (statut) {
+        case "Jeune léger":
+          message = "Salut jeune apprenti ! Avec ton rythme, tu progresses à ton allure. Continue comme ça !";
+          break;
+        case "Jeune intense":
+          message = "Wow jeune passionné ! Ton engagement est impressionnant. N'oublie pas de faire des pauses !";
+          break;
+        case "Adulte léger":
+          message = "Bonjour cher apprenant. Votre progression est constante. Augmentez votre temps si vous le souhaitez.";
+          break;
+        case "Adulte intense":
+          message = "Félicitations pour votre dévouement ! Vous êtes un modèle de persévérance.";
+          break;
+        default:
+          message = "Bienvenue sur notre plateforme d'apprentissage !";
+      }
+
+      return { statut, message };
+    }
+
+    document.getElementById("demarrer").addEventListener("click", () => {
+      const age = parseInt(prompt("Quel est votre âge ?"), 10);
+      const temps = parseFloat(prompt("Combien d'heures passez-vous par jour ?"));
+
+      if (isNaN(age) || isNaN(temps) || age < 0 || temps < 0) {
+        alert("Merci d’entrer des valeurs numériques valides pour l’âge et le temps.");
+        return;
+      }
+
+      const resultat = analyserProfil(age, temps);
+
+      document.getElementById("resultat").innerHTML = `
+        <p><strong>Statut :</strong> ${resultat.statut}</p>
+        <p><strong>Message :</strong> ${resultat.message}</p>
+      `;
+    });
+  </script>
+</body>
+</html>

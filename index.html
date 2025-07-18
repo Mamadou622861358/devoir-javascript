@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>API Users</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>App POO en JavaScript</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Utilisateurs</h1>
-  <ul id="user-list"></ul>
+  <h1>Application de Gestion d’Utilisateurs (POO JS)</h1>
 
-  <h2>Ajouter un utilisateur</h2>
-  <input type="text" id="name" placeholder="Nom">
-  <input type="email" id="email" placeholder="Email">
-  <button onclick="addUser()">Ajouter</button>
+  <section>
+    <div draggable="true" id="userCard">👤 Utilisateur à déplacer</div>
+    <div id="dropZone">Déposez ici</div>
+  </section>
 
-  <h2>Modifier l'utilisateur avec ID 1</h2>
-  <input type="text" id="edit-name" placeholder="Nouveau nom">
-  <input type="email" id="edit-email" placeholder="Nouvel email">
-  <button onclick="updateUser()">Modifier</button>
-
-  <h2>Supprimer l'utilisateur avec ID 1</h2>
-  <button onclick="deleteUser()">Supprimer</button>
-
-  <script src="script.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
